@@ -1,0 +1,36 @@
+<html> 
+<head> 
+
+<script type="text/javascript"> 
+function tipcalculator(){ 
+
+
+  var inputAmount = parseFloat(document.getElementById( 'dollars' ).value); 
+  var salesTax = parseFloat(document.getElementById( 'tax' ).value);
+  var tip = parseFloat(document.getElementById( 'tip' ).value); 
+  var taxprcnt = (salesTax/100) * (inputAmount);
+  var tipprcnt = (tip/100) * (inputAmount);
+  var Grandtotal = inputAmount + taxprcnt + tipprcnt;
+
+  document.getElementById( 'requestedGrand' ).innerHTML = Grandtotal.toFixed(2); 
+} 
+
+</script> 
+
+</head> 
+<body> 
+
+<h1>Tip Calculator</h1>
+<p>
+Please input bill subtotal" $<input type="text" id="dollars" /> <br>
+  What is the sales tax?:<input type="text" id="tax" />%<br>
+  how much do you want to tip?:<input type="text" id="tip" />% 
+  <input type="button" onclick="tipcalculator();" value="Calculate" /> 
+</p>
+</h2>The Grand Total is:</h2>
+<div id="requestedAmount"> </div> 
+<div id="requestedTax"> </div> 
+<div id="requestedGrand"> </div>
+
+</body> 
+</html>
