@@ -1,0 +1,34 @@
+extends layout
+//This brings in the contents of the layout.jade file
+
+block content
+ .jumbotron
+      .container
+        h1 #{title}
+        p
+          | Computer slowing you down? Going through software and hardware issues? Or maybe not working at all? Call us for a quick and easy quote to get the fix you need.
+        p
+          a.btn.btn-primary.btn-lg(href='repairService', role='button') Learn more »
+    .container
+      .row
+        .col-md-4
+          h2 Repair Services 
+          img.IT(src="/stylesheets/images/rs.jpg")
+          p
+            | Hardware issues? Internal issues? Whatever the case, us tech medics fix it all. 
+          p
+            a.btn.btn-default(href='/repairService', role='button') View details »
+        .col-md-4
+          h2 What we do
+          img.IT(src="/stylesheets/images/mi-pic.png")
+          p
+            | How we can help you. 
+          p
+            a.btn.btn-default(href='/ITService', role='button') View details »
+        .col-md-4
+          h2 Prices and Plans 
+          img.IT(src="/stylesheets/images/lc.jpeg")
+          p
+            | We our commited to offer affordable rates. 
+          p
+            a.btn.btn-default(href='/sale', role='button') View details »
