@@ -139,7 +139,10 @@ readJson('./customer.json', (err, data) => {
             }
         })    
     }
+    
 })
+const port  = process.env.PORT || 3001
+readJson.listen(port, () => console.log(`Listening on port ${port}...`))
 
     
     
